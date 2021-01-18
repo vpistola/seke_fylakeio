@@ -1,0 +1,89 @@
+﻿@page
+@model seke_fylakeio.Pages.Zygisma.IndexModel
+@{
+}
+
+<h1>Ενεργές Εγγραφές</h1>
+
+<p>
+    <a asp-page="Create">Δημιουργία Νέας Εγγραφής</a>
+</p>
+
+@*<form>
+    <p>
+        <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>*@
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].Vehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].Invoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].GrossWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].NetWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].TareWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zygisma[0].IsOk)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Zygisma)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vehicle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Invoice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrossWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NetWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TareWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsOk)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

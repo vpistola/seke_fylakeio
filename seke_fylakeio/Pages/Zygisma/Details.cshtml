@@ -1,0 +1,65 @@
+﻿@page
+@model seke_fylakeio.Pages.Zygisma.DetailsModel
+@{
+}
+
+<h1>Λεπτομέρειες</h1>
+
+<div>
+    <h4>Ζύγισμα</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.DateCreated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.DateCreated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.Vehicle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.Vehicle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.Invoice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.Invoice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.GrossWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.GrossWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.NetWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.NetWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.TareWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.TareWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zygisma.IsOk)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zygisma.IsOk)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Zygisma.Id">Edit</a> |
+    <a asp-page="./Index">Επιστροφή στην Αρχική Σελίδα</a>
+</div>

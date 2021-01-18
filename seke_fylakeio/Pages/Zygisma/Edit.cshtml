@@ -1,0 +1,58 @@
+﻿@page
+@model seke_fylakeio.Pages.Zygisma.EditModel
+@{
+}
+
+<h1>Ανανέωση Εγγραφής</h1>
+
+<h4>Ζύγισμα</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Zygisma.Id" />
+            <div class="form-group">
+                <label asp-for="Zygisma.Vehicle" class="control-label"></label>
+                <input asp-for="Zygisma.Vehicle" class="form-control" />
+                <span asp-validation-for="Zygisma.Vehicle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zygisma.DateCreated" class="control-label"></label>
+                <input asp-for="Zygisma.DateCreated" class="form-control" />
+                <span asp-validation-for="Zygisma.DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zygisma.Invoice" class="control-label"></label>
+                <input asp-for="Zygisma.Invoice" class="form-control" />
+                <span asp-validation-for="Zygisma.Invoice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zygisma.GrossWeight" class="control-label"></label>
+                <input asp-for="Zygisma.GrossWeight" class="form-control" />
+                <span asp-validation-for="Zygisma.GrossWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zygisma.NetWeight" class="control-label"></label>
+                <input asp-for="Zygisma.NetWeight" class="form-control" />
+                <span asp-validation-for="Zygisma.NetWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zygisma.TareWeight" class="control-label"></label>
+                <input asp-for="Zygisma.TareWeight" class="form-control" />
+                <span asp-validation-for="Zygisma.TareWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
