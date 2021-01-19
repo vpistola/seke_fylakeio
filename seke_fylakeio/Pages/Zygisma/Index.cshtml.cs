@@ -23,7 +23,7 @@ namespace seke_fylakeio.Pages.Zygisma
 
         public async Task OnGetAsync()
         {
-            var zygisma = _context.Zygisma.Take(5);
+            var zygisma = _context.Zygisma.Where(x => x.Active).OrderByDescending(x => x.DateCreated);
 
             Zygisma = await zygisma.ToListAsync();
 

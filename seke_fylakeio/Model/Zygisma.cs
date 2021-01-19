@@ -26,6 +26,7 @@ namespace seke_fylakeio.Model
         //[RegularExpression(@"^\d+\.\d{2}$")]
         public decimal NetWeight { get; set; }
         public bool IsOk { get; set; }
+        public bool Active { get; set; }
 
     }
 }

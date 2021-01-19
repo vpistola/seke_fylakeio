@@ -44,11 +44,17 @@ namespace seke_fylakeio.Pages.Zygisma
             {
                 return Page();
             }
-
+            
             if ((Zygisma.GrossWeight - Zygisma.NetWeight) != Zygisma.TareWeight)
+            {
                 Zygisma.IsOk = false;
+                Zygisma.Active = true;
+            }
             else
+            {
                 Zygisma.IsOk = true;
+                Zygisma.Active = false;
+            }
 
             _context.Attach(Zygisma).State = EntityState.Modified;
 
