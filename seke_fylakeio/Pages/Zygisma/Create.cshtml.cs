@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using seke_fylakeio.Data;
@@ -9,6 +10,7 @@ using seke_fylakeio.Model;
 
 namespace seke_fylakeio.Pages.Zygisma
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
 
@@ -21,14 +23,6 @@ namespace seke_fylakeio.Pages.Zygisma
 
         public IActionResult OnGet()
         {
-            //Movie = new Movie
-            //{
-            //    Genre = "Action",
-            //    Price = 1.99m,
-            //    ReleaseDate = DateTime.Now,
-            //    Title = "Conan"
-            //    , Rating = "R"
-            //};
             return Page();
         }
 
@@ -43,6 +37,8 @@ namespace seke_fylakeio.Pages.Zygisma
             {
                 return Page();
             }
+
+            Zygisma.Active = true;
 
             _context.Zygisma.Add(Zygisma);
             await _context.SaveChangesAsync();
